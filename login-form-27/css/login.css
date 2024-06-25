@@ -7,17 +7,11 @@
 
 section {
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: url('../images/backg.png') ;
     background-repeat: no-repeat;
-    background-size: cover;
-
-    
+    background-size: cover;  
 }
-
-
 
 .box {
     position: relative;
@@ -55,7 +49,7 @@ section {
         transform: translateY(-40px);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(  0px);
     }
 }
 
@@ -81,7 +75,7 @@ section {
     color: white;
     font-weight: 600;
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-align: center;
     position: relative;
     top: -20px;

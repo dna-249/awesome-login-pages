@@ -7,9 +7,46 @@
     <meta charset="utf-8">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/login.css">
+    <style>
+        .cont{
+            background-color: transparent;
+            font-size: 30px;
+            color: aliceblue;
+            display: block;
+            position: relative;
+            height: auto;
+            width: 100%;
+            border-radius:5px;
+            border: none
+        }
+        .cont > div{
+            width: 20%;
+            display: block;
+        }
+        ul,a{
+            list-style: none;
+            text-decoration: none;
+        }
+        li,a{
+            border-radius:5px;
+            border: none;
+            padding: 2px; ;
+            display: block;
+        }
+        h5,h3{
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-bottom: -10px;
+    text-align: left;
+    position: relative;
+    top: -20px;
+}
+    </style>
 </head>
 <body>
-   <section>
+   <section style="display: non; justify-content: center; align-items: center;">
         <div class="box">
 
             <div class="form">
@@ -18,35 +55,152 @@
                 <form class="" action="index.html" method="post" enctype="multipart/form-data">
             
                     <div class="inputBx">
-                        <input type="text" name="username" placeholder="Username" id="username" oninput="validation()" required autofocus>
+                        <input type="text" name="username" placeholder="Username"  id="user">
                         <img src="images/user.png" alt="">
                     </div>
                     <div class="inputBx">
-                        <input type="password" name="passward" id="password" placeholder="Passward" oninput="validation()" required>
+                        <input type="password" name="passward"   id="pass" placeholder="Passward">
                         <img src="images/lock.png" alt="">
                     </div>
-                    <label class="remeber"><input type="checkbox"> Remember Me</label>
+                    <label class="remeber">
+                        <input type="checkbox" id="user2"> Remember Me</label>
                     <div class="inputBx" > 
-                        <input  type="submit" name="submit" value="Login" id="submit" disabled>
+                        <input  type="button"  id="pass2" value="Login" onClick="controlPassword()"/>
                     </div>
                 </form>
-                <div><span style="float: left;"><a href="#">Forgot Passward </a></span>
-                <span style="float:right;"><a href="#">New user?Sign-in</a></span></div>
-
+                <div><span style="float: left;"><a href="#">Forgot Passward</a></span>
+                <span style="float:right;"><a href="#">New user?Signup</a></span></div>
             </div>
 
         </div>
     </section>
+    <section style="justify-content: center; align-items: center;">
+        <div class="box" style="width: 600px; height: 900px;">
+        <div class="form" style="top: 30px;">
+            <img src="images/profile.jpg" class="user" style="top:-25px" alt="">
+            <h2>Register here</h2>
+            <form class="" action="index.html" method="post" enctype="multipart/form-data">
+                <h3>Fill the following infomations:</h3>
+                <h5>First name:</h5>
+            
+                <div class="inputBx">
+                    <input type="text" name="username" placeholder="first name"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Second Name:</h5>
+                    <input type="text" name="text"   id="pass" placeholder="second name">
+                    <img src="images/lock.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Middle Name:</h5>
+                    <input type="text" name="Middle name" placeholder="Middle name"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h3>choose your Username and Passward:</h3>
+                    <h5>Username:</h5>
+                    <input type="text" name="Middle name" placeholder="Username"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>passward:</h5>
+                    <input type="password" name="Middle name" placeholder="passward"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Confirm your passward:</h5>
+                    <input type="password" name="Middle name" placeholder="passward"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx" style="justify-content: center; margin-top: 50px; left: 150px; padding: 10px ;">
+                   <a href="#"> <input type="button" name="Middle name" value="Save and Continue" style="width:auto; text-align: center;"></a>
+                    <img src="images/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="justify-content: center; align-items: center;">
+        <div class="box" style="width: 600px; height: 900px;">
+        <div class="form" style="top: 30px;">
+            <img src="images/profile.jpg" class="user" style="top:-25px" alt="">
+            <h2>Parent Contact:</h2>
+            <form class="" action="index.html" method="post" enctype="multipart/form-data">
+                <h3>Fill the following infomations:</h3>
+                <h5>Parent Full Name:</h5>
+            
+                <div class="inputBx">
+                    <input type="text" name="username" placeholder="Parent Full Name"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Gender:</h5>
+                    <input type="text" name="text"   id="pass" placeholder="Gender">
+                    <img src="images/lock.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>phone Number:</h5>
+                    <input type="number" name="Middle name" placeholder="phone Number"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h3>Location/Estate:</h3>
+                    <h5>Name of the Estate:</h5>
+                    <input type="text" name="Middle name" placeholder="Name of the Estate"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Street/District:</h5>
+                    <input type="password" name="Middle name" placeholder="Street/District"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx">
+                    <h5>Area Council:</h5>
+                    <input type="password" name="Middle name" placeholder="Area Council"  id="user">
+                    <img src="images/user.png" alt="">
+                </div>
+                <div class="inputBx" style="justify-content: center; margin-top: 50px; left: 200px;">
+                   <a href="#"> <input type="button" name="Middle name" value="Summit" style="width:auto; text-align: center; padding: 15px;"></a>
+                    <img src="images/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="display: non;">
+        <div class="cont"  style="position: relative">
+     <div>
+           <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#">Review</a> </li>
+            <li><a href="#"> payment</a></li>
+            <li> <a href="#">About</a> </li>
+            <li> <a href="#">News</a></li>
+           </ul>
+        </div>
+            
+
+        </div>
+    </section>
+
     <script type="text/javascript">
-    	function validation() {
-		    let username = document.getElementById("username").value;
-		    let pass = document.getElementById("password").value;
-		    if (username != "" && pass != "") {
-		        document.getElementById("submit").disabled = false;
-		    } else {
-		        document.getElementById("submit").disabled = true;
-		    }
-		}
+         function controlPassword(){
+            var user = document.getElementById('user').value; 
+            var pass = document.getElementById('pass').value;
+            var userpass = user + pass;
+            
+            var user2 = document.getElementById('user2').value;
+             var pass2 = document.getElementById('pass2').value;
+             var userpass2 = user2 + pass2;
+             var control = userpass.concat(',');
+             
+            if(control.includes(userpass2) === true && userpass !== "" ) {
+                alert(userpass2 + 'is present'); 
+            }  
+             }
     </script>
    </body>
 </html>
